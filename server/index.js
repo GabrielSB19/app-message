@@ -74,6 +74,4 @@ io.on("connection", (socket) => {
     const sendUserSocket = onlineUsers.get(id);
     socket.to(sendUserSocket).emit("accept-call");
   });
-
-  
 });
