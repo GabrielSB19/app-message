@@ -9,6 +9,7 @@ import { reducerCase } from "@/context/constants";
 
 function ChatHeader() {
   const [{ currentChatUser }, dispatch] = useStateProvider();
+
   const handleVoiceCall = () => {
     dispatch({
       type: reducerCase.SET_VOICE_CALL,

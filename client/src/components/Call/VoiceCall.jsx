@@ -13,7 +13,7 @@ function VoiceCall() {
         to: voiceCall.id,
         from: {
           id: userInfo.id,
-          profilePicture: userInfo.profilePicture,
+          profilePicture: userInfo.profileImage,
           name: userInfo.name,
         },
         callType: voiceCall.callType,
@@ -21,7 +21,8 @@ function VoiceCall() {
       });
     }
   }, [voiceCall]);
-  return <Container data={voiceCall}>VideoCall</Container>;
+
+  return <Container data={voiceCall} />;
 }
 
 export default VoiceCall;
