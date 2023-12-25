@@ -112,6 +112,10 @@ function Main() {
         dispatch({ type: reducerCase.END_CALL });
       });
 
+      socket.current.on("online-users", ({ onlineUsers }) => {
+        dispatch({ type: reducerCase.SET_ONLINE_USERS, onlineUsers });
+      });
+
       setSocketEvent(true);
     }
   }, [socket.current]);
